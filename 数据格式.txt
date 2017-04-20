@@ -1,0 +1,31 @@
+搜索数据：
+1. hadoop fs -ls hdfs://namenodefd1v.qss.zzzc.qihoo.net:9000
+  微博：hdfs://namenodefd1v.qss.zzzc.qihoo.net:9000/home/spider/data/weibo
+  微信：hdfs://namenodefd1v.qss.zzzc.qihoo.net:9000/home/spider/data/weixin
+  知乎：hdfs://namenodefd1v.qss.zzzc.qihoo.net:9000/home/spider/data/zhihu
+
+2. 搜索词：hadoop fs -ls /home/hdp-skyeye/liyu/output/wd/wd_virtual_data/201*****/201*****_normal_format
+    hadoop fs -ls /home/hdp-skyeye/liyu/output/wd/wd_virtual_data/20161130/20161130_normal_format
+
+3. 热点分析
+http://10.142.107.98:8370/brw/brwstatis/
+
+
+optype: 抓取的业务线
+errno: 0 表示正确，其他值表示出错
+pagesize：页面大小
+cuthtmlflag：0 表示正常，其他值表示页面被截断
+url: 源url
+durl: 最终抓取的url
+dlts: 抓取的时间戳
+dltimecost：抓取耗时
+lastip：dns的ip
+httpcode：http返回码
+content_type：http head里面返回的页面类型
+opts：附加字段，格式为"K1:V1;K2:V2"
+value: value[0]['type']是蜘蛛内部的一个标记
+value[0]['attrs']['content']: 是原始网页，  格式为：首先gzcompress压缩, 然后base64编码，
+         php解析方式：$html = gzuncompress(base64_decode($result['value'][0]['attrs']['content']));
+referer：抓取带的referrer
+Last-Modified：http head里面返回的最后修改时间
+uuid：一个全局唯一的id

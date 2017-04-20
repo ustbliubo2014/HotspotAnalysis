@@ -1,0 +1,5 @@
+1.获取全国所有unique_query
+2.获得所有query的搜索结果, 并计算每个query的关键词和关键词频率
+3.根据word2vec模型得到关键词的词向量, 生成hadoop_file
+4.用hadoop计算query之间两两距离
+5.解析数据,聚类,给出score
