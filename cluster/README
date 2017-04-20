@@ -1,1 +1,2 @@
 利用距离进行聚类(dbscan, hcluster, k-center)[因为没有每个点的feature, 不能使用kmeans]
+cluster_merge和cluster_split是对层次聚类结果的后处理(相当于层次聚类时有三个限制条件)
